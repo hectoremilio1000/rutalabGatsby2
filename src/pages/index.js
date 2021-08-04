@@ -30,6 +30,7 @@ const IndexPage = () => {
         }
       />
       <Body3Component />
+      <WorkFlow />
       <Somos
         titulo1={"¿Quiénes somos?"}
         text1={

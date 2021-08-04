@@ -1,16 +1,28 @@
 import React from "react";
-import imagen1 from "../images/body_5_somos.jpg";
+import { Box, Text, Heading } from "theme-ui";
 
-export default function Somos({ titulo1, text1, text2, titulo2 }) {
+export default function SectionHeader({ title, slogan, isWhite }) {
   return (
-    <div className="row" id="somos">
-      <div className="col-sm-8 d-flex flex-column justify-content-center">
-        <h1 className="display-6 font-weight-bold m-2 pt-2">{titulo1}</h1>
-        <p className="h5 m-2 pb-3">{text1}</p>
-      </div>
-      <div className="col-sm-4">
-        <img className="img-fluid" src={imagen1} alt="Max-width 100% mw-100" />
-      </div>
-    </div>
+    <Box sx={{ variant: "sectionHeader" }}>
+      <Text
+        as="p"
+        sx={{
+          variant: "sectionHeader.subTitle",
+          color: isWhite ? "black" : "primary",
+          opacity: isWhite ? 0.7 : 1,
+        }}
+      >
+        {slogan}
+      </Text>
+      <Heading
+        as="h2"
+        sx={{
+          variant: "sectionHeader.title",
+          color: isWhite ? "black" : "heading",
+        }}
+      >
+        {title}
+      </Heading>
+    </Box>
   );
 }
