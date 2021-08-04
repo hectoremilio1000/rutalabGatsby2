@@ -9,6 +9,8 @@ import WorkFlow from "../templates/workflow";
 import Somos from "../templates/somos";
 import Reserva from "../templates/Reserva";
 import Download from "../templates/Download";
+import Footer from "../templates/Footer";
+import Copyright from "../templates/Copyright";
 
 // Amplify.configure(awsconfig);
 
@@ -36,6 +38,8 @@ const IndexPage = () => {
       />
       <Reserva />
       <Download />
+      <Footer />
+      <Copyright />
     </>
   );
 };
