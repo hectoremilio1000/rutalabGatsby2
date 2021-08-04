@@ -1,12 +1,9 @@
 import * as React from "react";
 
 // Amplify Configuration
-import Amplify from "aws-amplify";
-import awsconfig from "../aws-exports";
+
 import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 import { Link } from "gatsby";
-
-Amplify.configure(awsconfig);
 
 export default function Administrador() {
   return (
@@ -47,10 +44,12 @@ export default function Administrador() {
                 <div class="sidebar-sticky pt-3">
                   <ul class="nav flex-column">
                     <li class="nav-item">
-                      <a class="nav-link active text-dark">
-                        <span data-feather="home"></span>
-                        Órdenes <span class="sr-only">(current)</span>
-                      </a>
+                      <Link
+                        to="/"
+                        class="navbar-brand col-md-3 col-lg-2 mr-0 px-3"
+                      >
+                        Administrador
+                      </Link>
                     </li>
                     <li class="nav-item">
                       <p>
@@ -58,16 +57,20 @@ export default function Administrador() {
                       </p>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link">
-                        <span data-feather="shopping-cart"></span>
-                        Órdenes en proceso
-                      </a>
+                      <Link
+                        to="/"
+                        class="navbar-brand col-md-3 col-lg-2 mr-0 px-3"
+                      >
+                        Administrador
+                      </Link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link">
-                        <span data-feather="users"></span>
-                        Órdenes en Análisis
-                      </a>
+                      <Link
+                        to="/"
+                        class="navbar-brand col-md-3 col-lg-2 mr-0 px-3"
+                      >
+                        Administrador
+                      </Link>
                     </li>
                   </ul>
                 </div>
