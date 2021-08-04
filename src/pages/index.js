@@ -5,6 +5,10 @@ import NavBarComponent from "../templates/NavBarComponent";
 import BannerComponent from "../templates/BannerComponent";
 import Body2Component from "../templates/Body2Component";
 import Body3Component from "../templates/Body3Component";
+import WorkFlow from "../templates/workflow";
+import Somos from "../templates/somos";
+import Reserva from "../templates/Reserva";
+import Download from "../templates/Download";
 
 // Amplify.configure(awsconfig);
 
@@ -24,6 +28,14 @@ const IndexPage = () => {
         }
       />
       <Body3Component />
+      <Somos
+        titulo1={"¿Quiénes somos?"}
+        text1={
+          "Somos una startup mexicana disruptiva en el mercado de pruebas clíncas en el Sector Salud de Méxicp. Creemos que existe un mercado actual que no está siendo atendido con nuevas tecnologías que permitan al usuario tener un mayor control de su salud en tiempo real."
+        }
+      />
+      <Reserva />
+      <Download />
     </>
   );
 };
