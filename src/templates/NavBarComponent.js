@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React from "react";
 import imagenLogo from "../images/logo_rutalab_final.png";
 import nombreLogo from "../images/nombre_rutalab_final copy.png";
@@ -28,12 +28,12 @@ const NavBarComponent = () => {
       </div>
       <div className="d-flex flex-row align-items-center col-lg-2 col-md-2 col-sm-6 col-6 justify-content-end bloque_sesion">
         <div className="m-2">
-          <Link
+          {/* <Link
             to="/administrador"
             className="text-dark font-weight-bold iniciar_sesion"
           >
             Administrador
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
