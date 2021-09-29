@@ -22,11 +22,11 @@ const IndexPage = () => {
       <Body2Component
         titulo1={"¿Qué es RUTALAB?"}
         text1={
-          "Es la app que te permite realizar tus estudios de laboratorio en donde te encuentres con seguimiento en tiempo real con un click."
+          "Es una empresa que ofrece servicios de laboratorio a domicilio con un click."
         }
         titulo2={"¿Cómo funciona RUTALAB?"}
         text2={
-          "Selecciona el estudio que deseas, confirma tu ubicación y un laboratorista llegará a tomar tu muestra, una vez concluya la prueba, podrás consultar el resultado certificado a través de la app. RUTALAB guardará todos tus test clínicos de por vida."
+          "Selecciona el estudio que deseas, da click en reservar confirma tu ubicación y un laboratorista llegará a tomar tu muestra, una vez concluya la prueba, podrás consultar el resultado certificado a través de esta página web en la sección de clientes."
         }
       />
       <Body3Component />

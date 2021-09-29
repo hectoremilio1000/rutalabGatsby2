@@ -1,5 +1,5 @@
 import React from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link } from "gatsby";
 
 export default function BannerComponent() {
   return (
@@ -16,19 +16,22 @@ export default function BannerComponent() {
         <div className="container-fluid">
           <div className="col-6 col-sm-7 justify-content-md-start">
             <h1 className="display-5 font-weight-bold pt-3 text-start">
-              Laboratorio urgente?
+              Prueba de COVID urgente?
               <h3 className="lead display-5 pb-5">
                 Estás en el lugar correcto
               </h3>
             </h1>
             <h1 className="display-5 font-weight-bold pt-3 text-start proximamente">
-              ¡Próximamente!
+              Solicita con un click
             </h1>
-            <AnchorLink to="/#somos">
-              <button type="button" className="btnSomos btn btn-lg text-white">
-                ¿Quiénes somos?
+            <Link to="https://wa.me/+5219511028474">
+              <button
+                type="button"
+                className="btnSomos btn bg-success btn-lg text-white"
+              >
+                ¡Reserva ya!
               </button>
-            </AnchorLink>
+            </Link>
           </div>
         </div>
       </header>
