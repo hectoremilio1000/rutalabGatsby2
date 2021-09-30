@@ -1,6 +1,6 @@
 import * as React from "react";
-// import Amplify from "aws-amplify";
-// import awsconfig from "../aws-exports";
+import Amplify from "aws-amplify";
+import awsconfig from "../aws-exports";
 import NavBarComponent from "../templates/NavBarComponent";
 import BannerComponent from "../templates/BannerComponent";
 import Body2Component from "../templates/Body2Component";
@@ -12,7 +12,7 @@ import Download from "../templates/Download";
 import Footer from "../templates/Footer";
 import Copyright from "../templates/Copyright";
 
-// Amplify.configure(awsconfig);
+Amplify.configure(awsconfig);
 
 const IndexPage = () => {
   return (

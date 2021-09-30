@@ -15,8 +15,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@aws-amplify/ui-react": "^1.2.8",
-    "aws-amplify": "^4.2.2",
+    "@aws-amplify/ui-react": "^1.2.18",
+    "aws-amplify": "^4.3.0",
     "bootstrap": "4.6",
     "gatsby": "^3.10.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
