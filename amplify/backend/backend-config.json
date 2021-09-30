@@ -1,10 +1,3 @@
 {
-  "auth": {
-    "rutalabwebapp5cdb93a4": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
-  }
+  "auth": {}
 }

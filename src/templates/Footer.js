@@ -41,6 +41,13 @@ export default function Footer() {
                   </small>
                 </li>
               </AnchorLink>
+              <Link to="/clientes">
+                <li className="list-unstyled">
+                  <small href="#!" className="text-white">
+                    Clientes
+                  </small>
+                </li>
+              </Link>
               <Link to="/administrador">
                 <li className="list-unstyled">
                   <small href="#!" className="text-white">

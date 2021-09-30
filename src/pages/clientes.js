@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
 // markup
-const Administrador = () => {
+const Clientes = () => {
   return (
     <>
       <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
@@ -24,4 +24,4 @@ const Administrador = () => {
   );
 };
 
-export default Administrador;
+export default Clientes;
