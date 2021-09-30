@@ -34,7 +34,7 @@ const IndexPage = () => {
       <Somos
         titulo1={"¿Quiénes somos?"}
         text1={
-          "Somos una startup mexicana disruptiva en el mercado de pruebas clíncas en el Sector Salud de Méxicp. Creemos que existe un mercado actual que no está siendo atendido con nuevas tecnologías que permitan al usuario tener un mayor control de su salud en tiempo real."
+          "Somos una startup mexicana con los estándares más altos de confiabilidad y confidencialidad de pruebas clínicas en el Sector Salud de Méxicp. Creemos que existe un mercado actual que no está siendo atendido con nuevas tecnologías que permitan al paciente tener un mayor control de su salud."
         }
       />
       <Reserva />

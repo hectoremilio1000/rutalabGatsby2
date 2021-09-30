@@ -33,10 +33,12 @@ export default function Body3Component() {
           </div>
           <div className="d-flex justify-content-center">
             <Link to="https://wa.me/+5219511028474">
-              <button className="btn btn-success btn-dark rounded mt-3">
-                ¡Reserva ya! ${servicios[0].precio}{" "}
-                <h6 className="font-weight-lighter oldPricebody3 pt-1">
-                  ${servicios[0].oldPrice}
+              <button className="btn bg-success text-white rounded mt-3">
+                <h6 className="font-weight-bold pt-1">
+                  ¡Reserva ya! ${servicios[0].precio}{" "}
+                </h6>
+                <h6 className="font-weight-light oldPricebody3 pt-1">
+                  <del>${servicios[0].oldPrice}</del>
                 </h6>
               </button>
             </Link>
@@ -65,10 +67,12 @@ export default function Body3Component() {
           </div>
           <div className="d-flex justify-content-center">
             <Link to="https://wa.me/+5219511028474">
-              <button className="btn btn-success btn-dark rounded mt-3">
-                ¡Reserva ya! ${servicios[1].precio}{" "}
-                <h6 className="font-weight-lighter oldPricebody3 pt-1">
-                  ${servicios[1].oldPrice}
+              <button className="btn bg-success text-white rounded mt-3">
+                <h6 className="font-weight-bold pt-1">
+                  ¡Reserva ya! ${servicios[1].precio}{" "}
+                </h6>
+                <h6 className="font-weight-light oldPricebody3 pt-1">
+                  <del>${servicios[1].oldPrice}</del>
                 </h6>
               </button>
             </Link>
@@ -97,10 +101,12 @@ export default function Body3Component() {
           </div>
           <div className="d-flex justify-content-center">
             <Link to="https://wa.me/+5219511028474">
-              <button className="btn btn-success btn-dark rounded mt-3">
-                ¡Reserva ya! ${servicios[2].precio}{" "}
-                <h6 className="font-weight-lighter oldPricebody3 pt-1">
-                  ${servicios[2].oldPrice}
+              <button className="btn bg-success text-white rounded mt-3">
+                <h6 className="font-weight-bold pt-1">
+                  ¡Reserva ya! ${servicios[2].precio}{" "}
+                </h6>
+                <h6 className="font-weight-light oldPricebody3 pt-1">
+                  <del>${servicios[2].oldPrice}</del>
                 </h6>
               </button>
             </Link>

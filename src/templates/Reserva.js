@@ -1,16 +1,21 @@
 import React from "react";
-import servicios from "../assets/data/servicios";
+import servicios from "../../src/assets/data2/servicios2";
+import { Link } from "gatsby";
 
 export default function Reserva() {
   return (
     <div id="reserva">
-      <section className="jumbotron text-center">
+      <section className="jumbotron text-center" id="reserva">
         <div className="container">
           <h1>¡Reserva ya!</h1>
           <p className="lead text-muted">
-            Es muy fácil, sólo tienes que bajar nuestra App en App Store o
-            Google Play Store para reservar cualquiera de nuestros servicios
+            Es muy fácil, sólo da click en el botón y reserva en tiempo real.
           </p>
+          <Link to="https://wa.me/+5219511028474">
+            <button className="btn bg-success btn-lg text-white rounded mt-3">
+              ¡Da click ahora!
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -34,12 +39,13 @@ export default function Reserva() {
                   <div className="d-flex justify-content-around">
                     <small>Tiempo Resultado</small>
                     <small className="text-muted">
-                      {servicios[0].tiempoResultado}min
+                      {servicios[0].resultados}
                     </small>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="card mb-4 shadow-sm">
                 <img
@@ -57,7 +63,7 @@ export default function Reserva() {
                   <div className="d-flex justify-content-around">
                     <small>Tiempo Resultado</small>
                     <small className="text-muted">
-                      {servicios[1].tiempoResultado}min
+                      {servicios[1].resultados}
                     </small>
                   </div>
                 </div>
@@ -80,77 +86,7 @@ export default function Reserva() {
                   <div className="d-flex justify-content-around">
                     <small>Tiempo Resultado</small>
                     <small className="text-muted">
-                      {servicios[2].tiempoResultado}min
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <img
-                  className="bd-placeholder-img img-thumbnail"
-                  width="100%"
-                  height="225"
-                  src={servicios[3].imagen}
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                  aria-label="Placeholder: COVID"
-                ></img>
-                <div className="card-body">
-                  <h5>{servicios[3].titulo}</h5>
-                  <p className="card-text">{servicios[3].descripcion}</p>
-                  <div className="d-flex justify-content-around">
-                    <small>Tiempo Resultado</small>
-                    <small className="text-muted">
-                      {servicios[3].tiempoResultado}min
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <img
-                  className="bd-placeholder-img img-thumbnail"
-                  width="100%"
-                  height="225"
-                  src={servicios[4].imagen}
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                  aria-label="Placeholder: COVID"
-                ></img>
-                <div className="card-body">
-                  <h5>{servicios[4].titulo}</h5>
-                  <p className="card-text">{servicios[4].descripcion}</p>
-                  <div className="d-flex justify-content-around">
-                    <small>Tiempo Resultado</small>
-                    <small className="text-muted">
-                      {servicios[4].tiempoResultado}min
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <img
-                  className="bd-placeholder-img img-thumbnail"
-                  width="100%"
-                  height="225"
-                  src={servicios[5].imagen}
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                  aria-label="Placeholder: COVID"
-                ></img>
-                <div className="card-body">
-                  <h5>{servicios[5].titulo}</h5>
-                  <p className="card-text">{servicios[5].descripcion}</p>
-                  <div className="d-flex justify-content-around">
-                    <small>Tiempo Resultado</small>
-                    <small className="text-muted">
-                      {servicios[5].tiempoResultado}min
+                      {servicios[2].resultados}
                     </small>
                   </div>
                 </div>

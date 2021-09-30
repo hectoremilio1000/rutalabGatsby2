@@ -1,5 +1,6 @@
 import React from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link } from "gatsby";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
             </h5>
             <p className="text-white descripcion_footer">
               Servicios de test de laboratorio con los estándares más altos de
-              calidad.
+              calidad a domicilio.
             </p>
           </div>
           <div className="col-6 text-center">
@@ -28,18 +29,32 @@ export default function Footer() {
                   <small className="text-white">¿Quiénes somos?</small>
                 </li>
               </AnchorLink>
-              <AnchorLink to="/#servicios">
+              <AnchorLink to="/#pruebasCovid">
                 <li className="list-unstyled">
-                  <small className="text-white">Servicios</small>
+                  <small className="text-white">Servicios COVID</small>
                 </li>
               </AnchorLink>
-              <AnchorLink to="/#funciona">
+              <AnchorLink to="/#reserva">
                 <li className="list-unstyled">
                   <small href="#!" className="text-white">
-                    ¿Cómo funciona?
+                    ¡Reserva ya!
                   </small>
                 </li>
               </AnchorLink>
+              <Link to="/administrador">
+                <li className="list-unstyled">
+                  <small href="#!" className="text-white">
+                    Administrador
+                  </small>
+                </li>
+              </Link>
+              <Link to="/privacidad">
+                <li className="list-unstyled">
+                  <small href="#!" className="text-white">
+                    Privacidad
+                  </small>
+                </li>
+              </Link>
             </ul>
           </div>
         </div>

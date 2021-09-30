@@ -15,18 +15,18 @@ const data = [
   },
   {
     id: 2,
-    title: "Escoge tu ubicación",
-    text: "A través de la App de RUTALAB puedes observar en tiempo real cuanto tiempo falta para que recibas al laboratorista en tu ubicación seleccionada",
+    title: "Reserva y manda tu ubicación",
+    text: "Da click y reserva el test que escogiste, a través de whatsapp manda tu ubicación",
   },
   {
     id: 3,
     title: "Recibe al Laboratorista",
-    text: "El test que seleccionaste se realiza con los estándares más altos de calidad para darte la mayor confiabilidad y cuidarte contra el COVID ",
+    text: "El test que seleccionaste se realiza con los estándares más altos de calidad para darte la mayor confiabilidad y cuidarte contra el COVID",
   },
   {
     id: 4,
     title: "Checa el resultado",
-    text: "Gracias a RUTALAB podrás revisar en todo momento tanto los resultados del test solicitado, como de estudios anteriores",
+    text: "En esta página web en la sección de clientes podrás revisar en todo momento tanto los resultados del test solicitado, como de estudios anteriores",
   },
 ];
 
