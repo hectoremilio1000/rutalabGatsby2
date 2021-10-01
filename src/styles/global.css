@@ -34,12 +34,37 @@ ul {
 }
 
 @media (max-width: 500px) {
-  .boton_orina {
-    margin-top: 2.4rem !important;
+  /*banner*/
+
+  .bannerheader {
+    height: 600px !important;
+    padding-top: 0px !important;
+  }
+
+  .titleBanner {
+    font-size: 30px !important;
+  }
+
+  .subtituloBanner {
+    font-size: 14px !important;
+    padding-bottom: 10px !important;
   }
 
   .proximamente {
+    padding-top: 0px !important;
     font-size: 20px !important;
+  }
+
+  /**/
+  .tituloBody2 {
+    font-size: 30px !important;
+  }
+
+  .titulo2Body2 {
+    font-size: 30px !important;
+  }
+  .boton_orina {
+    margin-top: 2.4rem !important;
   }
 
   .descarga {
@@ -76,10 +101,10 @@ ul {
 
   /*footer*/
   .atrevete_footer {
-    font-size: 14px !important;
+    font-size: 18px !important;
   }
   .descripcion_footer {
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
 }
 

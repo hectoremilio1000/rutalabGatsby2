@@ -22,7 +22,7 @@ const IndexPage = () => {
       <Body2Component
         titulo1={"¿Qué es RUTALAB?"}
         text1={
-          "Es una empresa que ofrece servicios de laboratorio a domicilio con un click."
+          "Somos una empresa que ofrece servicios de laboratorio a domicilio con un click."
         }
         titulo2={"¿Cómo funciona RUTALAB?"}
         text2={
