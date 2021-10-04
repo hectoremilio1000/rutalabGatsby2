@@ -3,13 +3,13 @@ const servicios = [
     id: "1",
     titulo: "Prueba COVID PCR",
     imagen: "https://imagenesrutalab.s3.amazonaws.com/rutalab/PCR_vector.jpg",
-    precio: 1800,
-    oldPrice: 2500,
+    precio: 1700,
+    oldPrice: 2000,
     tiempoResultado: 30,
     descripcion:
       "Método específico para determinar la presencia del virus. Idealmente se utiliza en pacientes que presentan síntomas agudos para confirmar la enfermedad. Es recomendada si el paciente tuvo contacto con una persona diagnosticada, incluso si no presenta síntomas. Se requiere la recolección de células infectadas de la nasofaringe y orofaringe del paciente mediante un hisopo. Se requiere ayuno de 4- 5 horas.",
     descripcioncorta: "Crees tener COVID-19 y tienes o no síntomas.",
-    resultados: "RESULTADOS EN 24 a 72 horas",
+    resultados: "RESULTADOS EN 24 a 48 horas",
     comentarios:
       "Esta es la prueba solicitada para fines de viajes e intervenciones médicas, entre otras.",
     tipoMuestra: "Muestra de nariz y garganta",
@@ -20,12 +20,12 @@ const servicios = [
     imagen:
       "https://imagenesrutalab.s3.amazonaws.com/images/covid/pruebaCovid.jpg",
     precio: 690,
-    oldPrice: 790,
+    oldPrice: 890,
     tiempoResultado: 30,
     descripcion:
-      "Una prueba rápida de antígenos o prueba rápida es una prueba de diagnóstico rápida adecuada como prueba en el punto de atención que directamente detecta la presencia o ausencia de un antígeno. Se utiliza generalmente para la detección de SARS-CoV-2, el virus que causa COVID-19. Las pruebas rápidas son un tipo de pruebas de flujo lateral que detectan proteínas, lo que las distingue de otras pruebas médicas que detectan anticuerpos (pruebas de anticuerpos) o ácido nucleico (pruebas de ácido nucleico), de tipo laboratorio o punto de atención.",
+      "Una prueba rápida de antígenos o prueba rápida es una prueba de diagnóstico rápida que directamente detecta la presencia o ausencia de un antígeno. Se utiliza generalmente para la detección de SARS-CoV-2, el virus que causa COVID-19. Las pruebas rápidas son un tipo de pruebas de flujo lateral que detectan proteínas, lo que las distingue de otras pruebas médicas que detectan anticuerpos (pruebas de anticuerpos) o ácido nucleico (pruebas de ácido nucleico), de tipo laboratorio o punto de atención.",
     descripcioncorta: "Crees tener COVID-19 y tienes o no síntomas.",
-    resultados: "RESULTADOS EN 30 minutos",
+    resultados: "RESULTADOS EN 2 horas",
     comentarios:
       "Si tu resultado es POSITIVO se confirma COVID-19. Si tu resultado es NEGATIVO es necesario realizar una PRUEBA DE PCR",
     tipoMuestra: "Muestra de nariz",
@@ -35,14 +35,15 @@ const servicios = [
     titulo: "PRUEBA DE ANTICUERPOS",
     imagen:
       "https://imagenesrutalab.s3.amazonaws.com/images/biometria/biometriaHematica.jpg",
-    precio: 799,
-    oldPrice: 999,
+    precio: 800,
+    oldPrice: 980,
     tiempoResultado: 30,
     descripcion:
       "Prueba realizada por metodología de electroquimioluminiscencia para la detección de anticuerpos totales cuantitativos anti SARS-CoV-2. También llamada prueba serológica cuantitativa; el resultado indica la cantidad de anticuerpos presentes en la sangre del paciente que se pueden producir como respuesta a la infección por el virus SARS-CoV-2 o por efecto de la vacunación.                                                                                                                                                                                               Se analiza la presencia de inmunoglobulinas IgM (que aparecen entre 7 y 10 días después del contacto con el virus) e IgG (que aparecen entre 10 y 15 días después).",
     descripcioncorta: "Crees tener COVID-19 y tienes o no síntomas.",
-    resultados: "RESULTADOS EN 24 horas",
-    comentarios: "Prueba post-vacuna o post-infección",
+    resultados: "RESULTADOS DE 24 horas a 48 horas",
+    comentarios:
+      "Prueba post-vacuna o post-infección para conocer cuantos anticuerpos ANTICOVID tienes en tu cuerpo",
     tipoMuestra: "Muestra de sangre",
   },
   {

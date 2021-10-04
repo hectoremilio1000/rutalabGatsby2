@@ -11,22 +11,22 @@ const data = [
   {
     id: 1,
     title: "Selecciona el Test",
-    text: "Define el servicio que requieres por parte de RUTALAB, recuerda leer las instrucciones de cada test.",
+    text: "Define el servicio que requieres por parte de RUTALAB.",
   },
   {
     id: 2,
     title: "Reserva y manda tu ubicación",
-    text: "Da click y reserva el test que escogiste, a través de whatsapp manda tu ubicación",
+    text: "Da click y reserva el test que escogiste. A través de whatsapp manda tu ubicación.",
   },
   {
     id: 3,
     title: "Recibe al Laboratorista",
-    text: "El test que seleccionaste se realiza con los estándares más altos de calidad para darte la mayor confiabilidad y cuidarte contra el COVID",
+    text: "El test que seleccionaste se realiza con los estándares más altos de calidad para darte la mayor confiabilidad y cuidarte contra el COVID.",
   },
   {
     id: 4,
     title: "Checa el resultado",
-    text: "En esta página web en la sección de clientes podrás revisar en todo momento tanto los resultados del test solicitado, como de estudios anteriores",
+    text: "En esta página web en la sección de clientes podrás revisar en todo momento tanto los resultados del test solicitado, como de estudios anteriores. También puedes solicitarlos por whatsapp.",
   },
 ];
 

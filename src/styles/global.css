@@ -6,6 +6,11 @@ ul {
   padding-inline-start: 0px !important;
 }
 
+.tituloCard {
+  font-weight: 800;
+  font-size: 19px;
+}
+
 .row {
   margin-right: 0px !important;
   margin-left: 0px !important;
@@ -54,7 +59,9 @@ ul {
     padding-top: 0px !important;
     font-size: 20px !important;
   }
-
+  .tituloCard {
+    font-size: 18px;
+  }
   /**/
   .tituloBody2 {
     font-size: 30px !important;

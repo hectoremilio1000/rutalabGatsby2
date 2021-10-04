@@ -26,7 +26,7 @@ const IndexPage = () => {
         }
         titulo2={"¿Cómo funciona RUTALAB?"}
         text2={
-          "Selecciona el estudio que deseas, da click en reservar confirma tu ubicación y un laboratorista llegará a tomar tu muestra, una vez concluya la prueba, podrás consultar el resultado certificado a través de esta página web en la sección de clientes."
+          "Selecciona el estudio que deseas, da click en reservar confirma tu ubicación y un laboratorista llegará a tomar tu muestra, una vez concluya la prueba, podrás consultar el resultado certificado a través de esta página web en la sección de clientes o a través de tu whatsapp."
         }
       />
       <Body3Component />
@@ -34,7 +34,7 @@ const IndexPage = () => {
       <Somos
         titulo1={"¿Quiénes somos?"}
         text1={
-          "Somos una startup mexicana con los estándares más altos de confiabilidad y confidencialidad de pruebas clínicas en el Sector Salud de Méxicp. Creemos que existe un mercado actual que no está siendo atendido con nuevas tecnologías que permitan al paciente tener un mayor control de su salud."
+          "Somos una empresa 100% mexicana con los estándares más altos de confiabilidad y confidencialidad de pruebas clínicas en el Sector Salud de México. Creemos que existe un mercado actual que no está siendo atendido con nuevas tecnologías que permitan al paciente tener un mayor control y mayor conocimiento sobre el estado actual de su salud."
         }
       />
       <Reserva />
