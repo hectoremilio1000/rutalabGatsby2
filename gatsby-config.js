@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.rutalab.com",
+    siteUrl: "https://www.rutalab.com/",
     title: "rutalabwebapp",
   },
   plugins: [
