@@ -19,6 +19,7 @@ const IndexPage = () => {
     <>
       <NavBarComponent />
       <BannerComponent />
+
       <Body2Component
         titulo1={"¿Qué es RUTALAB?"}
         text1={
