@@ -1,24 +1,28 @@
-import * as React from "react";
+import React, { useState } from "react";
+import SidebarDashboard from "../components/sidebarDashboard";
 import { Link } from "gatsby";
 
 /**insertar amplify auth */
-import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
 
 // markup
 const Administrador = () => {
+  const [navSidebar, setNavSidebar] = useState(true);
+  const show_sidebar = () => {
+    setNavSidebar(!navSidebar);
+  };
+
   return (
     <>
       <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
-        Home
+        Inicio
       </Link>
-      <AmplifyAuthenticator>
-        <h1>hola administrador con cambios</h1>
 
-        <AmplifySignOut>
-          <button>
-            <p>Salir de aquí pulsa click</p>
-          </button>
-        </AmplifySignOut>
+      <AmplifyAuthenticator>
+        <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
+        <div className="container-dashboard">
+          <h1>Perfil OverView</h1>
+        </div>
       </AmplifyAuthenticator>
     </>
   );
