@@ -11,7 +11,6 @@ const SubMenu = ({ item, index }) => {
         key={index}
         className="links-menu-dashboard"
         onClick={item.subNav && showSubnav}
-        onKeyDown={item.subNav && showSubnav}
       >
         <div className={`link-block ${subnav ? "link-active" : ""}`}>
           <div className="left-link">
