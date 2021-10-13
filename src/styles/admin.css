@@ -1,0 +1,31 @@
+.welcome-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px !important;
+}
+.title-ordenes {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px !important;
+}
+.status-create {
+  background: #000 !important;
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.status-camino {
+  background: rgb(45, 14, 187) !important;
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.status-completado {
+  background: rgb(8, 170, 103) !important;
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}

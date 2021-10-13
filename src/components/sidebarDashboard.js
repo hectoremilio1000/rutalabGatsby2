@@ -1,8 +1,8 @@
 import React from "react";
 import NavDashboard from "./navDashboard";
 import "../styles/sidebarDashboard.css";
-import { SidebarData } from "./sidebarData";
-import SubMenu from "./subMenu";
+import { SidebarData } from "./SidebarData";
+import SubMenu from "./SubMenu";
 const SidebarDashboard = props => {
   const { navSidebar, show_sidebar } = props;
   const avatar_user =
@@ -19,6 +19,7 @@ const SidebarDashboard = props => {
           !navSidebar ? "overlay-sidebar-show" : ""
         }`}
         onClick={show_sidebar}
+        onKeyDown={show_sidebar}
       ></div>
       <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
       <aside

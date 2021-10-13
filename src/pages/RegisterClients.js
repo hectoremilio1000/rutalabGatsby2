@@ -73,7 +73,7 @@ const RegisterClients = () => {
     setNavSidebar(!navSidebar);
   };
   const [show_register, setShow_register] = useState(false);
-  const [tabledata, setTableData] = useState(DataClientes);
+  const [tabledata] = useState(DataClientes);
   const columns = [
     {
       title: "Nombres y Apellidos",
@@ -102,7 +102,7 @@ const RegisterClients = () => {
   const [gender, setGender] = useState("");
   const [estados, setEstados] = useState("");
   const [date, setDate] = useState("");
-  const [calle, setCalle] = useState("");
+  const [setCalle] = useState("");
   const [number_ext, setNumber_ext] = useState("");
   const [number_int, setNumber_int] = useState("");
   const [municipalidad, setMunicipalidad] = useState("");
