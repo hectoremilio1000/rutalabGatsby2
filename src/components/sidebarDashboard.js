@@ -1,8 +1,9 @@
 import React from "react";
 import NavDashboard from "./navDashboard";
 import "../styles/sidebarDashboard.css";
-import { SidebarData } from "./sidebardata";
-import SubMenu from "./submenu";
+import SubMenu from "./SubMenu";
+import { SidebarData } from "./sideBarData";
+
 const SidebarDashboard = props => {
   const { navSidebar, show_sidebar } = props;
   const avatar_user =

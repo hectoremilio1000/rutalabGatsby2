@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-const SubMenu = ({ item, index }) => {
+
+function SubMenu({ item, index }) {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => {
     setSubnav(!subnav);
   };
+
   return (
     <>
       <li
@@ -41,6 +43,6 @@ const SubMenu = ({ item, index }) => {
       </li>
     </>
   );
-};
+}
 
 export default SubMenu;
