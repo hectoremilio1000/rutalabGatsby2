@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SidebarDashboard from "../components/sidebarDashboard";
 import MaterialTable from "material-table";
 import { FaPlus } from "react-icons/fa";
 import { DataOrdenes } from "../components/DataOrdenes";
@@ -21,6 +20,7 @@ import Remove from "@material-ui/icons/Remove";
 import SaveAlt from "@material-ui/icons/SaveAlt";
 import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
+import SidebarDashboard from "../components/SidebarDashboard";
 
 const tableIcons = {
   Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),

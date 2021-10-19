@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import SidebarDashboard from "../components/sidebarDashboard";
 // import TemplateOrden from "../components/templateorden";
 
 import jsPDF from "jspdf";
 import { TemplateOrden } from "../components/templateorden";
+import SidebarDashboard from "../components/SidebarDashboard";
 
 const OrdenDetail = () => {
   const [navSidebar, setNavSidebar] = useState(true);

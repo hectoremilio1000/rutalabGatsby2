@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import SidebarDashboard from "../components/sidebarDashboard";
 import { Link } from "gatsby";
 import MaterialTable from "material-table";
 import { DataOrdenesToday } from "../components/DataOrdenesToday";
+import SidebarDashboard from "../components/SidebarDashboard";
 
 // ICONOS PARA LA TABLA MATERIAL TABLE
 import { forwardRef } from "react";

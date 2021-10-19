@@ -9,7 +9,7 @@ import { Auth } from "aws-amplify";
 const avatar_user =
   "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
 
-const navDashboard = props => {
+const NavDashboard = props => {
   const { navSidebar, show_sidebar } = props;
 
   async function signOut() {
@@ -42,4 +42,4 @@ const navDashboard = props => {
   );
 };
 
-export default navDashboard;
+export default NavDashboard;
