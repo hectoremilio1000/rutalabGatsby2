@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import MaterialTable from "material-table";
 import { FaPlus } from "react-icons/fa";
 import { DataOrdenes } from "../components/DataOrdenes";
-// import "../components/IconsMaterialTable";
-// ICONOS PARA LA TABLA MATERIAL TABLE
+
 import { forwardRef } from "react";
 import AddBox from "@material-ui/icons/AddBox";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
@@ -46,104 +45,75 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-// FIN DE ICONOS
+const [navSidebar, setNavSidebar] = useState(true);
+const show_sidebar = () => {
+  setNavSidebar(!navSidebar);
+};
+const [show_register, setShow_register] = useState(false);
+const [tabledata] = useState(DataOrdenes);
+const columns = [
+  {
+    title: "# Orden",
+    field: "orden",
+    defaultSort: "asc",
+    filterPlaceholder: "Bucar por #orden",
+  },
+  {
+    title: "Fecha",
+    field: "fecha",
+    filterPlaceholder: "Bucar por fecha",
+  },
+  {
+    title: "Hora",
+    field: "hora",
+    FilterList: false,
+  },
+  {
+    title: "Paciente",
+    field: "paciente",
+    filterPlaceholder: "Bucar por nombre del paciente",
+  },
+  {
+    title: "Servicio",
+    field: "servicio",
+  },
+  {
+    title: "Medico",
+    field: "medico",
+  },
+  {
+    title: "Status",
+    field: "status",
+  },
+  {
+    title: "Pdf",
+    field: "pdf",
+  },
+];
+
+//   Formulario
+//  ---- obtencion de los datos por onchange
+const [setOrden] = useState("");
+const [paciente, setPaciente] = useState("");
+const [servicio, setServicio] = useState("");
+const [medico, setMedico] = useState("");
+
+//   reset formulario y esconder
+
+const resetForm = () => {
+  console.log("refresh");
+};
+
+const sendDates = () => {
+  console.log("aqui iran los datos");
+  let orden = document.querySelector("#orden");
+  let n_orden = orden.value;
+  setOrden(n_orden);
+  console.log(n_orden, medico, servicio, paciente);
+};
+// ---- fin de obtencion de los datos por onchange
 
 const RegisterOrden = () => {
-  // api de codigos postales
-
-  //   useEffect(() => {
-  //     async function getEstados() {
-  //       try {
-  //         const resEstados = await axios(
-  //           "https://apisgratis.com/api/codigospostales/v2/entidades/"
-  //         );
-  //         setEstados(resEstados.data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     }
-  //     getEstados();
-  //   }, []);
-
-  // Generar PDF con jsPDF
-  // const generatePDF = () => {
-  //   var doc = new jsPDF("p", "pt", "a4");
-  //   doc.html(document.querySelector("#register-orden"), {
-  //     callback: function (pdf) {
-  //       pdf.save("ordenes.pdf");
-  //     },
-  //   });
-  // };
-  // fin de generar pdf
-
-  // fin de api de codigos postales
-  const [navSidebar, setNavSidebar] = useState(true);
-  const show_sidebar = () => {
-    setNavSidebar(!navSidebar);
-  };
-  const [show_register, setShow_register] = useState(false);
-  const [tabledata] = useState(DataOrdenes);
-  const columns = [
-    {
-      title: "# Orden",
-      field: "orden",
-      defaultSort: "asc",
-      filterPlaceholder: "Bucar por #orden",
-    },
-    {
-      title: "Fecha",
-      field: "fecha",
-      filterPlaceholder: "Bucar por fecha",
-    },
-    {
-      title: "Hora",
-      field: "hora",
-      FilterList: false,
-    },
-    {
-      title: "Paciente",
-      field: "paciente",
-      filterPlaceholder: "Bucar por nombre del paciente",
-    },
-    {
-      title: "Servicio",
-      field: "servicio",
-    },
-    {
-      title: "Medico",
-      field: "medico",
-    },
-    {
-      title: "Status",
-      field: "status",
-    },
-    {
-      title: "Pdf",
-      field: "pdf",
-    },
-  ];
-
-  //   Formulario
-  //  ---- obtencion de los datos por onchange
-  const [setOrden] = useState("");
-  const [paciente, setPaciente] = useState("");
-  const [servicio, setServicio] = useState("");
-  const [medico, setMedico] = useState("");
-
-  //   reset formulario y esconder
-
-  const resetForm = () => {
-    console.log("refresh");
-  };
-
-  const sendDates = () => {
-    console.log("aqui iran los datos");
-    let orden = document.querySelector("#orden");
-    let n_orden = orden.value;
-    setOrden(n_orden);
-    console.log(n_orden, medico, servicio, paciente);
-  };
-  // ---- fin de obtencion de los datos por onchange
   return (
     <>
       <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />

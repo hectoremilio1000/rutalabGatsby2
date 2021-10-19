@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import MaterialTable from "material-table";
 import { DataOrdenesToday } from "../components/DataOrdenesToday";
-import SidebarDashboard from "../components/SidebarDashboard";
 
 // ICONOS PARA LA TABLA MATERIAL TABLE
 import { forwardRef } from "react";
@@ -25,6 +24,7 @@ import "../styles/admin.css";
 
 //amplify
 import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
+import SidebarDashboard from "../components/SidebarDashboard";
 
 const tableIcons = {
   Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -53,6 +53,7 @@ let lenghtData = 0;
 DataOrdenesToday.forEach(e => {
   lenghtData += 1;
 });
+
 const Administrador = () => {
   const [navSidebar, setNavSidebar] = useState(true);
 
@@ -60,7 +61,6 @@ const Administrador = () => {
   const show_sidebar = () => {
     setNavSidebar(!navSidebar);
   };
-
   const columns = [
     {
       title: "# Orden",
@@ -118,6 +118,7 @@ const Administrador = () => {
       ),
     },
   ];
+
   return (
     <>
       <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">

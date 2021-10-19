@@ -16,12 +16,12 @@ export const SidebarData = [
   },
   {
     title: "Pacientes",
-    path: "/RegisterClients",
+    path: "/registerClients",
     icon: <FaUserInjured />,
   },
   {
     title: "Test / Orden",
-    path: "/RegisterOrden",
+    path: "/registerOrden",
     icon: <FaVial />,
   },
   {

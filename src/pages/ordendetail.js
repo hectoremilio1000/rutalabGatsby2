@@ -5,7 +5,7 @@ import jsPDF from "jspdf";
 import { TemplateOrden } from "../components/templateorden";
 import SidebarDashboard from "../components/SidebarDashboard";
 
-const OrdenDetail = () => {
+const Ordendetail = () => {
   const [navSidebar, setNavSidebar] = useState(true);
   const show_sidebar = () => {
     setNavSidebar(!navSidebar);
@@ -51,4 +51,4 @@ const OrdenDetail = () => {
   );
 };
 
-export default OrdenDetail;
+export default Ordendetail;

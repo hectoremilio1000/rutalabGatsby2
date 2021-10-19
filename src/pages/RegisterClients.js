@@ -3,8 +3,7 @@ import MaterialTable from "material-table";
 import { FaPlus } from "react-icons/fa";
 import { DataClientes } from "../components/DataClientes";
 import "../styles/registro.css";
-// import "../components/IconsMaterialTable";
-// ICONOS PARA LA TABLA MATERIAL TABLE
+
 import { forwardRef } from "react";
 import AddBox from "@material-ui/icons/AddBox";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
@@ -47,27 +46,7 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-// FIN DE ICONOS
-
 const RegisterClients = () => {
-  // api de codigos postales
-
-  //   useEffect(() => {
-  //     async function getEstados() {
-  //       try {
-  //         const resEstados = await axios(
-  //           "https://apisgratis.com/api/codigospostales/v2/entidades/"
-  //         );
-  //         setEstados(resEstados.data);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     }
-  //     getEstados();
-  //   }, []);
-
-  // fin de api de codigos postales
-  // var estados_parser;
   const [navSidebar, setNavSidebar] = useState(true);
   const show_sidebar = () => {
     setNavSidebar(!navSidebar);
@@ -131,6 +110,7 @@ const RegisterClients = () => {
     );
   };
   // ---- fin de obtencion de los datos por onchange
+
   return (
     <>
       <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
