@@ -1,14 +1,26 @@
 .body3component {
-  background-color: #f1fcff;
+  background-color: #d4d4d461;
+}
+
+.bannerTitulo {
+  font-size: 35px !important;
+  color: black;
+}
+
+.lugarCorrecto {
+  font-size: 20px !important;
+  color: black !important;
+  margin-top: -10px;
+}
+
+.proximamente {
+  font-size: 25px !important;
+  color: rgb(69, 69, 69) !important;
+  width: 350px;
 }
 
 ul {
   padding-inline-start: 0px !important;
-}
-
-.tituloCard {
-  font-weight: 800;
-  font-size: 19px;
 }
 
 .row {
@@ -17,7 +29,7 @@ ul {
 }
 
 .footer {
-  background-color: #022180;
+  background-color: #0056b7;
 }
 
 .copyright {
@@ -26,7 +38,50 @@ ul {
 }
 
 .btnSomos {
-  background: #022180;
+  background: #0056b7;
+}
+
+.imagenSomos {
+  border-radius: 10% !important;
+}
+
+/*body2component*/
+.containerImagenSomos {
+  margin-bottom: 10px;
+}
+
+.containerbody2 {
+  margin-bottom: 10px;
+}
+
+/*body 3 component*/
+
+.imagenbody3 {
+  border-radius: 10%;
+}
+
+.oldPricebody3 {
+  text-decoration: line-through;
+}
+
+.tituloCard {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.muestraCard {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.resultadosCard {
+  font-weight: 500;
+  color: #0056b7;
+}
+
+.comentariosCard {
+  font-weight: 600;
+  color: #6e6e6e;
 }
 
 @media (max-width: 1100px) {
@@ -39,39 +94,33 @@ ul {
 }
 
 @media (max-width: 500px) {
-  /*banner*/
-
-  .bannerheader {
-    height: 600px !important;
-    padding-top: 0px !important;
+  .boton_orina {
+    margin-top: 2.4rem !important;
   }
 
-  .titleBanner {
-    font-size: 30px !important;
+  .titulo1body2 {
+    font-size: 30px;
   }
 
-  .subtituloBanner {
-    font-size: 14px !important;
-    padding-bottom: 10px !important;
+  .texto1body2 {
+    font-size: 18px;
+  }
+
+  .bannerTitulo {
+    font-size: 18px !important;
+    color: black;
+  }
+
+  .lugarCorrecto {
+    font-size: 12px !important;
+    color: black !important;
+    width: 200px;
   }
 
   .proximamente {
-    padding-top: 0px !important;
-    font-size: 20px !important;
-  }
-  .tituloCard {
-    font-size: 18px;
-  }
-  /**/
-  .tituloBody2 {
-    font-size: 30px !important;
-  }
-
-  .titulo2Body2 {
-    font-size: 30px !important;
-  }
-  .boton_orina {
-    margin-top: 2.4rem !important;
+    font-size: 10px !important;
+    color: rgb(69, 69, 69) !important;
+    width: 130px;
   }
 
   .descarga {
@@ -106,12 +155,16 @@ ul {
     font-size: 10px;
   }
 
+  .containerImagenSomos {
+    padding-top: 25px;
+  }
+
   /*footer*/
   .atrevete_footer {
-    font-size: 18px !important;
+    font-size: 14px !important;
   }
   .descripcion_footer {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
 }
 
