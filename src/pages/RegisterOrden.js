@@ -45,75 +45,74 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-const [navSidebar, setNavSidebar] = useState(true);
-const show_sidebar = () => {
-  setNavSidebar(!navSidebar);
-};
-const [show_register, setShow_register] = useState(false);
-const [tabledata] = useState(DataOrdenes);
-const columns = [
-  {
-    title: "# Orden",
-    field: "orden",
-    defaultSort: "asc",
-    filterPlaceholder: "Bucar por #orden",
-  },
-  {
-    title: "Fecha",
-    field: "fecha",
-    filterPlaceholder: "Bucar por fecha",
-  },
-  {
-    title: "Hora",
-    field: "hora",
-    FilterList: false,
-  },
-  {
-    title: "Paciente",
-    field: "paciente",
-    filterPlaceholder: "Bucar por nombre del paciente",
-  },
-  {
-    title: "Servicio",
-    field: "servicio",
-  },
-  {
-    title: "Medico",
-    field: "medico",
-  },
-  {
-    title: "Status",
-    field: "status",
-  },
-  {
-    title: "Pdf",
-    field: "pdf",
-  },
-];
-
-//   Formulario
-//  ---- obtencion de los datos por onchange
-const [setOrden] = useState("");
-const [paciente, setPaciente] = useState("");
-const [servicio, setServicio] = useState("");
-const [medico, setMedico] = useState("");
-
-//   reset formulario y esconder
-
-const resetForm = () => {
-  console.log("refresh");
-};
-
-const sendDates = () => {
-  console.log("aqui iran los datos");
-  let orden = document.querySelector("#orden");
-  let n_orden = orden.value;
-  setOrden(n_orden);
-  console.log(n_orden, medico, servicio, paciente);
-};
-// ---- fin de obtencion de los datos por onchange
-
 const RegisterOrden = () => {
+  const [navSidebar, setNavSidebar] = useState(true);
+  const show_sidebar = () => {
+    setNavSidebar(!navSidebar);
+  };
+  const [show_register, setShow_register] = useState(false);
+  const [tabledata] = useState(DataOrdenes);
+  const columns = [
+    {
+      title: "# Orden",
+      field: "orden",
+      defaultSort: "asc",
+      filterPlaceholder: "Bucar por #orden",
+    },
+    {
+      title: "Fecha",
+      field: "fecha",
+      filterPlaceholder: "Bucar por fecha",
+    },
+    {
+      title: "Hora",
+      field: "hora",
+      FilterList: false,
+    },
+    {
+      title: "Paciente",
+      field: "paciente",
+      filterPlaceholder: "Bucar por nombre del paciente",
+    },
+    {
+      title: "Servicio",
+      field: "servicio",
+    },
+    {
+      title: "Medico",
+      field: "medico",
+    },
+    {
+      title: "Status",
+      field: "status",
+    },
+    {
+      title: "Pdf",
+      field: "pdf",
+    },
+  ];
+
+  //   Formulario
+  //  ---- obtencion de los datos por onchange
+  const [setOrden] = useState("");
+  const [paciente, setPaciente] = useState("");
+  const [servicio, setServicio] = useState("");
+  const [medico, setMedico] = useState("");
+
+  //   reset formulario y esconder
+
+  const resetForm = () => {
+    console.log("refresh");
+  };
+
+  const sendDates = () => {
+    console.log("aqui iran los datos");
+    let orden = document.querySelector("#orden");
+    let n_orden = orden.value;
+    setOrden(n_orden);
+    console.log(n_orden, medico, servicio, paciente);
+  };
+  // ---- fin de obtencion de los datos por onchange
   return (
     <>
       <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
