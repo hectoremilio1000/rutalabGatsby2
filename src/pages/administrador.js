@@ -23,7 +23,6 @@ import ViewColumn from "@material-ui/icons/ViewColumn";
 import "../styles/admin.css";
 
 //amplify
-import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
 import SidebarDashboard from "../components/SidebarDashboard";
 
 const tableIcons = {
@@ -124,35 +123,32 @@ const Administrador = () => {
       <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
         Inicio
       </Link>
-      <AmplifyAuthenticator>
-        <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
-        <div
-          className={`container-dashboard ${
-            !navSidebar ? "close_sidebar" : ""
-          }`}
-        >
-          <h1 className="welcome-title">Bienvenido Administrador</h1>
-          <h3 className="title-ordenes">Ordenes del dia</h3>
-          <MaterialTable
-            columns={columns}
-            data={tabledata}
-            title="Lista de ordenes"
-            icons={tableIcons}
-            options={{
-              filtering: true,
-              paging: true,
-              pageSizeOptions: [lenghtData, 5, 10, 15, 20, 50],
-              pageSize: lenghtData,
-              paginationType: "stepped",
-              showFirstLastPageButtons: false,
-              exportButton: true,
-              exportAllData: true,
-              exportFileName: "Mis Ordenes",
-              selection: true,
-            }}
-          />
-        </div>
-      </AmplifyAuthenticator>
+
+      <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
+      <div
+        className={`container-dashboard ${!navSidebar ? "close_sidebar" : ""}`}
+      >
+        <h1 className="welcome-title">Bienvenido Administrador</h1>
+        <h3 className="title-ordenes">Ordenes del dia</h3>
+        <MaterialTable
+          columns={columns}
+          data={tabledata}
+          title="Lista de ordenes"
+          icons={tableIcons}
+          options={{
+            filtering: true,
+            paging: true,
+            pageSizeOptions: [lenghtData, 5, 10, 15, 20, 50],
+            pageSize: lenghtData,
+            paginationType: "stepped",
+            showFirstLastPageButtons: false,
+            exportButton: true,
+            exportAllData: true,
+            exportFileName: "Mis Ordenes",
+            selection: true,
+          }}
+        />
+      </div>
     </>
   );
 };
