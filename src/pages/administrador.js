@@ -14,7 +14,7 @@ const Administrador = () => {
 
   return (
     <div>
-      <h1>Formulario para PDF</h1>
+      <h1>Formulario para PDF jampier</h1>
       <form className="row" onSubmit={onSubmit}>
         <div className="col-md-6">
           <h4 className="display-6">Nombre completo</h4>
