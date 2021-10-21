@@ -1,8 +1,8 @@
 import React from "react";
-import NavDashboard from "./navDashboard";
 import "../styles/sidebarDashboard.css";
-import { SidebarData } from "./SidebarData";
+import NavDashboard from "./NavDashboard";
 import SubMenu from "./SubMenu";
+import { SidebarData } from "./SidebarData";
 
 const SidebarDashboard = props => {
   const { navSidebar, show_sidebar } = props;
@@ -12,15 +12,18 @@ const SidebarDashboard = props => {
     "https://imagenesrutalab.s3.amazonaws.com/sanmateo/logo/logo_sanmateo_final.jpg";
   const logo_name =
     "https://imagenesrutalab.s3.amazonaws.com/sanmateo/logo/nombre_sanmateo_final+copy.png";
-
   return (
     <>
-      <div
-        className={`overlay-sidebar ${
-          !navSidebar ? "overlay-sidebar-show" : ""
-        }`}
-        onClick={show_sidebar}
-      ></div>
+      <h1>hola</h1>
+      <div>
+        <button
+          className={`overlay-sidebar ${
+            !navSidebar ? "overlay-sidebar-show" : ""
+          }`}
+          onClick={show_sidebar}
+        ></button>
+      </div>
+
       <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
       <aside
         className={`aside-dashboard ${!navSidebar ? "closed_sidebar" : ""}`}
