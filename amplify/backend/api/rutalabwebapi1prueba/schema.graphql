@@ -1,0 +1,8 @@
+type paciente @model {
+  id: ID!
+  nombre: String!
+  edad: Int!
+  direccion: String!
+  email: String!
+  telefono: Int!
+}
