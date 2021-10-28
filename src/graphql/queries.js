@@ -1,34 +1,26 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getPaciente = /* GraphQL */ `
-  query GetPaciente($id: ID!) {
-    getPaciente(id: $id) {
+export const getUser = /* GraphQL */ `
+  query GetUser($id: ID!) {
+    getUser(id: $id) {
       id
-      nombre
-      edad
-      direccion
-      email
-      telefono
+      username
       createdAt
       updatedAt
     }
   }
 `;
-export const listPacientes = /* GraphQL */ `
-  query ListPacientes(
-    $filter: ModelpacienteFilterInput
+export const listUsers = /* GraphQL */ `
+  query ListUsers(
+    $filter: ModeluserFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listPacientes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        nombre
-        edad
-        direccion
-        email
-        telefono
+        username
         createdAt
         updatedAt
       }

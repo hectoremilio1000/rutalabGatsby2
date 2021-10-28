@@ -1,4 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+//authenticator
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+import { Auth } from "@aws-amplify/auth";
+import { API, graphqlOperation } from "aws-amplify";
+
+//importar queries
+import { getUser } from "../graphql/queries";
+import { createUser } from "../graphql/mutations";
 
 const Administrador = () => {
   const [nombre, setNombre] = useState("");
@@ -11,6 +20,38 @@ const Administrador = () => {
     event.preventDefault();
     console.log("datos enviados");
   };
+
+  const saveUserDB = async user => {
+    console.log(user);
+    await API.graphql(graphqlOperation(createUser, { input: user }));
+  };
+
+  useEffect(() => {
+    const updateUser = async () => {
+      //obtener la info del usuario autenticado
+      const userInfo = await Auth.currentAuthenticatedUser({
+        bypassCache: true,
+      });
+      console.log(userInfo);
+      //checar si está en la base de datos de dynamodb
+      if (userInfo) {
+        const userData = await API.graphql(
+          graphqlOperation(getUser, { id: userInfo.attributes.sub })
+        );
+        console.log(userData);
+        if (!userData.data.getUser) {
+          const user = {
+            nameuser: userInfo.attributes.email,
+            emailuser: userInfo.attributes.email,
+          };
+          await saveUserDB(user);
+        }
+        console.log("user already exist");
+      }
+    };
+
+    updateUser();
+  }, []);
 
   return (
     <div>
@@ -70,8 +111,9 @@ const Administrador = () => {
           Enviar
         </button>
       </form>
+      <AmplifySignOut />
     </div>
   );
 };
 
-export default Administrador;
+export default withAuthenticator(Administrador);

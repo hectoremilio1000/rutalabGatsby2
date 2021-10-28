@@ -1,4 +1,22 @@
 {
+  "nuevo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rutalabwebfinal-nuevo-24757-authRole",
+      "UnauthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-nuevo-24757-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-nuevo-24757-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rutalabwebfinal-nuevo-24757-deployment",
+      "UnauthRoleName": "amplify-rutalabwebfinal-nuevo-24757-unauthRole",
+      "StackName": "amplify-rutalabwebfinal-nuevo-24757",
+      "StackId": "arn:aws:cloudformation:us-east-1:900765165512:stack/amplify-rutalabwebfinal-nuevo-24757/fb004500-2718-11ec-9f60-0eb6af1d49db",
+      "AmplifyAppId": "d8s0msgulza43"
+    },
+    "categories": {
+      "auth": {
+        "rutalabwebfinal": {}
+      }
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-rutalabwebfinal-dev-83247-authRole",
@@ -9,6 +27,24 @@
       "UnauthRoleName": "amplify-rutalabwebfinal-dev-83247-unauthRole",
       "StackName": "amplify-rutalabwebfinal-dev-83247",
       "StackId": "arn:aws:cloudformation:us-east-1:900765165512:stack/amplify-rutalabwebfinal-dev-83247/e885ae40-21f2-11ec-803b-0e51e21103c3",
+      "AmplifyAppId": "d8s0msgulza43"
+    },
+    "categories": {
+      "auth": {
+        "rutalabwebfinal": {}
+      }
+    }
+  },
+  "prueba": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rutalabwebfinal-prueba-205106-authRole",
+      "UnauthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-prueba-205106-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-prueba-205106-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rutalabwebfinal-prueba-205106-deployment",
+      "UnauthRoleName": "amplify-rutalabwebfinal-prueba-205106-unauthRole",
+      "StackName": "amplify-rutalabwebfinal-prueba-205106",
+      "StackId": "arn:aws:cloudformation:us-east-1:900765165512:stack/amplify-rutalabwebfinal-prueba-205106/8756efd0-3791-11ec-96a8-12e1ea594e29",
       "AmplifyAppId": "d8s0msgulza43"
     },
     "categories": {

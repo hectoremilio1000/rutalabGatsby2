@@ -1,52 +1,40 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createPaciente = /* GraphQL */ `
-  mutation CreatePaciente(
-    $input: CreatePacienteInput!
-    $condition: ModelpacienteConditionInput
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $input: CreateUserInput!
+    $condition: ModeluserConditionInput
   ) {
-    createPaciente(input: $input, condition: $condition) {
+    createUser(input: $input, condition: $condition) {
       id
-      nombre
-      edad
-      direccion
-      email
-      telefono
+      username
       createdAt
       updatedAt
     }
   }
 `;
-export const updatePaciente = /* GraphQL */ `
-  mutation UpdatePaciente(
-    $input: UpdatePacienteInput!
-    $condition: ModelpacienteConditionInput
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $input: UpdateUserInput!
+    $condition: ModeluserConditionInput
   ) {
-    updatePaciente(input: $input, condition: $condition) {
+    updateUser(input: $input, condition: $condition) {
       id
-      nombre
-      edad
-      direccion
-      email
-      telefono
+      username
       createdAt
       updatedAt
     }
   }
 `;
-export const deletePaciente = /* GraphQL */ `
-  mutation DeletePaciente(
-    $input: DeletePacienteInput!
-    $condition: ModelpacienteConditionInput
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $input: DeleteUserInput!
+    $condition: ModeluserConditionInput
   ) {
-    deletePaciente(input: $input, condition: $condition) {
+    deleteUser(input: $input, condition: $condition) {
       id
-      nombre
-      edad
-      direccion
-      email
-      telefono
+      username
       createdAt
       updatedAt
     }
