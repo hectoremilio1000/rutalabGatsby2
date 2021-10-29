@@ -32,15 +32,16 @@
     }
   },
   "api": {
-    "rutalabwebapi1prueba": {
+    "rutalabawepapiprueba": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authrutalabwebfinal"
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "description": "rutalabapiprueba"
             }
           },
           "additionalAuthenticationProviders": []
