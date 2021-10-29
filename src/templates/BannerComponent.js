@@ -16,7 +16,7 @@ export default function BannerComponent() {
         <div className="container-fluid">
           <div className="col-6 col-sm-7 justify-content-md-start">
             <h1 className="display-5 font-weight-bold pt-3 text-start titleBanner">
-              Prueba de COVID urgente?
+              Necesitas una Prueba de COVID urgente?
             </h1>
             <h3 className="lead display-5 pb-5 subtituloBanner">
               Servicio a domicilio

@@ -16,23 +16,5 @@
         "rutalabwebfinal": {}
       }
     }
-  },
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-rutalabwebfinal-dev-83247-authRole",
-      "UnauthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-dev-83247-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::900765165512:role/amplify-rutalabwebfinal-dev-83247-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-rutalabwebfinal-dev-83247-deployment",
-      "UnauthRoleName": "amplify-rutalabwebfinal-dev-83247-unauthRole",
-      "StackName": "amplify-rutalabwebfinal-dev-83247",
-      "StackId": "arn:aws:cloudformation:us-east-1:900765165512:stack/amplify-rutalabwebfinal-dev-83247/e885ae40-21f2-11ec-803b-0e51e21103c3",
-      "AmplifyAppId": "d8s0msgulza43"
-    },
-    "categories": {
-      "auth": {
-        "rutalabwebfinal": {}
-      }
-    }
   }
 }
