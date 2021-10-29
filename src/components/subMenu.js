@@ -15,9 +15,9 @@ const SubMenu = ({ item, index }) => {
       >
         <div className={`link-block ${subnav ? "link-active" : ""}`}>
           <div className="left-link">
-            <Link className="toggle-drop" to={item.path}>
-              {item.icon} <p>{item.title}</p>
-            </Link>
+            {/* <Link className="toggle-drop" to={item.path}> */}
+            {item.icon} <p>{item.title}</p>
+            {/* </Link> */}
           </div>
           {item.subNav && subnav ? (
             <div className="right-link">{item.iconOpened}</div>
@@ -31,9 +31,9 @@ const SubMenu = ({ item, index }) => {
               item.subNav.map((item, index) => {
                 return (
                   <li className="link-submenu">
-                    <Link to={item.path} className="dropdown-items" key={index}>
-                      {item.icon} {item.title}
-                    </Link>
+                    {/* <Link to={item.path} className="dropdown-items" key={index}> */}
+                    {item.icon} {item.title}
+                    {/* </Link> */}
                   </li>
                 );
               })}
