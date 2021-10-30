@@ -16,7 +16,7 @@ const NavDashboard = props => {
         <div
           className="drop-down-menu"
           onClick={show_sidebar}
-          onKeyDown={show_sidebar}
+          role="presentation"
         >
           <FaAlignJustify />
         </div>

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
+
+import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
 const Administrador = () => {
   const [nombre, setNombre] = useState("");
@@ -14,6 +17,10 @@ const Administrador = () => {
 
   return (
     <div>
+      <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
+        Home
+      </Link>
+      <AmplifySignOut />
       <h1>Formulario para PDF jampier</h1>
       <form className="row" onSubmit={onSubmit}>
         <div className="col-md-6">
@@ -74,4 +81,4 @@ const Administrador = () => {
   );
 };
 
-export default Administrador;
+export default withAuthenticator(Administrador);

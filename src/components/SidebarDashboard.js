@@ -14,15 +14,13 @@ const SidebarDashboard = props => {
     "https://imagenesrutalab.s3.amazonaws.com/sanmateo/logo/nombre_sanmateo_final+copy.png";
   return (
     <>
-      <h1>hola</h1>
-      <div>
-        <button
-          className={`overlay-sidebar ${
-            !navSidebar ? "overlay-sidebar-show" : ""
-          }`}
-          onClick={show_sidebar}
-        ></button>
-      </div>
+      <div
+        role="presentation"
+        className={`overlay-sidebar ${
+          !navSidebar ? "overlay-sidebar-show" : ""
+        }`}
+        onClick={show_sidebar}
+      ></div>
 
       <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
       <aside
