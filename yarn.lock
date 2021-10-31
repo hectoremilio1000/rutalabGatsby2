@@ -169,7 +169,7 @@
     qrcode "^1.4.4"
     uuid "^8.2.0"
 
-"@aws-amplify/ui-react@^1.2.19":
+"@aws-amplify/ui-react@^1.2.22":
   version "1.2.22"
   resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react/-/ui-react-1.2.22.tgz#47a025bd357977f171ba2c768529f695a258056f"
   integrity sha512-+SgtJQ6TUOSfkW0+OO6qJl8adIQYjfCcLivmLaOhDH8QMNI0T7qDkbhjGIihjuQuZ/nIaCgHohjobgn21LOjkw==
@@ -4754,6 +4754,11 @@ amazon-cognito-identity-js@5.2.2:
     fast-base64-decode "^1.0.0"
     isomorphic-unfetch "^3.0.0"
     js-cookie "^2.2.1"
+
+amplify@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/amplify/-/amplify-0.0.11.tgz#fd81c7068c862823f2508b8f3c650eb76753f58c"
+  integrity sha1-/YHHBoyGKCPyUIuPPGUOt2dT9Yw=
 
 anser@^2.0.1:
   version "2.1.0"

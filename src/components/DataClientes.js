@@ -11,6 +11,6 @@ export const DataClientes = [
     name: "Hector Emilio Velasquez R.",
     direccion: "Av. Bolognesi 1540",
     email: "hectoemilio@gmail.com",
-    telefono: "+52 9896096462",
+    telefono: "9896096462",
   },
 ];
