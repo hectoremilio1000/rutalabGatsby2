@@ -9,10 +9,9 @@ export const createPaciente = /* GraphQL */ `
     createPaciente(input: $input, condition: $condition) {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
@@ -26,10 +25,9 @@ export const updatePaciente = /* GraphQL */ `
     updatePaciente(input: $input, condition: $condition) {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
@@ -43,10 +41,9 @@ export const deletePaciente = /* GraphQL */ `
     deletePaciente(input: $input, condition: $condition) {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }

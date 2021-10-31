@@ -6,10 +6,9 @@ export const getPaciente = /* GraphQL */ `
     getPaciente(id: $id) {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
@@ -25,10 +24,9 @@ export const listPacientes = /* GraphQL */ `
       items {
         id
         name
-        apellido
         direccion
-        estado
-        codigopostal
+        email
+        telefono
         createdAt
         updatedAt
       }

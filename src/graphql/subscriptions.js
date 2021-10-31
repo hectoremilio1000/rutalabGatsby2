@@ -6,10 +6,9 @@ export const onCreatePaciente = /* GraphQL */ `
     onCreatePaciente {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
@@ -20,10 +19,9 @@ export const onUpdatePaciente = /* GraphQL */ `
     onUpdatePaciente {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
@@ -34,10 +32,9 @@ export const onDeletePaciente = /* GraphQL */ `
     onDeletePaciente {
       id
       name
-      apellido
       direccion
-      estado
-      codigopostal
+      email
+      telefono
       createdAt
       updatedAt
     }
