@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 //link
 import { Link } from "gatsby";
 
-//API AMPKILY
-import { API, graphqlOperation } from "aws-amplify";
-import { listPacientes } from "../graphql/queries";
+// //API AMPKILY
+// import { API, graphqlOperation } from "aws-amplify";
+// import { listPacientes } from "../graphql/queries";
 
 //import authenticator
-import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
+// import { AmplifyAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
 
-import SidebarDashboard from "../components/SidebarDashboard";
+// import SidebarDashboard from "../components/SidebarDashboard";
 import MaterialTable from "material-table";
 import { FaPlus } from "react-icons/fa";
 import { DataClientes } from "../components/DataClientes";
@@ -92,10 +92,10 @@ const IniciarSesion = () => {
 
   // fin de api de codigos postales
   // var estados_parser;
-  const [navSidebar, setNavSidebar] = useState(true);
-  const show_sidebar = () => {
-    setNavSidebar(!navSidebar);
-  };
+  // const [navSidebar, setNavSidebar] = useState(true);
+  // // const show_sidebar = () => {
+  // //   setNavSidebar(!navSidebar);
+  // // };
   const [show_register, setShow_register] = useState(false);
   const [tabledata] = useState(DataClientes);
   const columns = [
@@ -166,7 +166,7 @@ const IniciarSesion = () => {
       {/* <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} /> */}
 
       <div
-        className={`container-dashboard ${!navSidebar ? "close_sidebar" : ""}`}
+      // className={`container-dashboard ${!navSidebar ? "close_sidebar" : ""}`}
       >
         <h1 className="name-link">Mis Clientes</h1>
         <div className="container-registers">
