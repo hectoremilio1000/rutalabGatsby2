@@ -14,6 +14,10 @@ import { createPaciente } from "../graphql/mutations";
 //import authenticator
 import { AmplifySignOut, AmplifyAuthenticator } from "@aws-amplify/ui-react";
 
+// import sidebar dashboard
+import PruebaSidebar from "../components/PruebaSidebar";
+// import SidebarDashboard from "../components/SidebarDashboard";
+
 //importar iconos
 import { FaPlus } from "react-icons/fa";
 // ICONOS PARA LA TABLA MATERIAL TABLE
@@ -126,16 +130,11 @@ const Clientes = () => {
     }
   };
 
-  //refrescar formulario
-  // const resetForm = () => {
-  //   console.log("refresh");
-  // };
-
   //cancelar registr
 
-  const cancelarRegistro = () => {
-    window.alert("se canceló un registro");
-  };
+  // const cancelarRegistro = () => {
+  //   window.alert("se canceló un registro");
+  // };
 
   //sacando datos de los pacientes
   const fetchPacientes = async () => {
@@ -154,124 +153,139 @@ const Clientes = () => {
     fetchPacientes();
   }, []);
 
+  // const [navSidebar, setNavSidebar] = useState(true);
+  // const show_sidebar = () => {
+  //   setNavSidebar(!navSidebar);
+  // };
+
   return (
     <>
       <Link to="/" class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
         Home
       </Link>
-      <AmplifyAuthenticator>
-        <div>
-          <h1 className="row-title">Datos del paciente</h1>
-          <div className="container-registers">
-            {!show_register ? (
-              <button
-                className="btn btn-primary show-register"
-                onClick={() => {
-                  setShow_register(true);
-                }}
-              >
-                Registrar
-              </button>
-            ) : null}
-            {show_register ? (
-              <>
-                <h1 className="row-title">Datos del paciente</h1>
-                <div className="dates-row-4">
-                  <div className="group-date">
-                    <span>Nombre completo</span>
-                    <input
-                      name="name"
-                      type="text"
-                      className="control-form"
-                      placeholder="Ingresa el nombre del paciente"
-                      onChange={e => {
-                        setName(e.target.value);
-                      }}
-                    />
-                  </div>
 
-                  <div className="group-date">
-                    <span>Dirección</span>
-                    <input
-                      name="calle"
-                      type="text"
-                      className="control-form"
-                      placeholder="Nombre de la calle"
-                      onChange={e => {
-                        setDireccion(e.target.value);
-                      }}
-                    />
-                  </div>
-                  <div className="group-date">
-                    <span>Email</span>
-                    <input
-                      name="email"
-                      type="email"
-                      className="control-form"
-                      placeholder="Ingresa el @correo electronico"
-                      onChange={e => {
-                        setEmail(e.target.value);
-                      }}
-                    />
-                  </div>
-                  <div className="group-date">
-                    <span>Telefono</span>
-                    <input
-                      name="phone"
-                      type="number"
-                      className="control-form"
-                      placeholder="Ingresa el numero de telefono"
-                      onChange={e => {
-                        setPhone(e.target.value);
-                      }}
-                    />
-                  </div>
-                </div>
+      <AmplifyAuthenticator>
+        <PruebaSidebar />
+        {/* <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} /> */}
+        <div
+          className="container-dashboard"
+          // className={`container-dashboard ${
+          //   !navSidebar ? "close_sidebar" : ""
+          // }`}
+        >
+          <div>
+            <h1 className="row-title">Datos del paciente</h1>
+            <div className="container-registers">
+              {!show_register ? (
                 <button
-                  onClick={createNewPaciente}
-                  id="register"
-                  className="btn btn-success show-register"
-                >
-                  <FaPlus />
-                  Registrar
-                </button>
-                <button
-                  id="cancel-register"
-                  className="btn btn-secondary show-register"
+                  className="btn btn-primary show-register"
                   onClick={() => {
-                    cancelarRegistro();
+                    setShow_register(true);
                   }}
                 >
-                  Cancelar
+                  Registrar
                 </button>
-              </>
-            ) : null}
+              ) : null}
+              {show_register ? (
+                <>
+                  <h1 className="row-title">Datos del paciente</h1>
+                  <div className="dates-row-4">
+                    <div className="group-date">
+                      <span>Nombre completo</span>
+                      <input
+                        name="name"
+                        type="text"
+                        className="control-form"
+                        placeholder="Ingresa el nombre del paciente"
+                        onChange={(e) => {
+                          setName(e.target.value);
+                        }}
+                      />
+                    </div>
+
+                    <div className="group-date">
+                      <span>Dirección</span>
+                      <input
+                        name="calle"
+                        type="text"
+                        className="control-form"
+                        placeholder="Nombre de la calle"
+                        onChange={(e) => {
+                          setDireccion(e.target.value);
+                        }}
+                      />
+                    </div>
+                    <div className="group-date">
+                      <span>Email</span>
+                      <input
+                        name="email"
+                        type="email"
+                        className="control-form"
+                        placeholder="Ingresa el @correo electronico"
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                        }}
+                      />
+                    </div>
+                    <div className="group-date">
+                      <span>Telefono</span>
+                      <input
+                        name="phone"
+                        type="number"
+                        className="control-form"
+                        placeholder="Ingresa el numero de telefono"
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <button
+                    onClick={createNewPaciente}
+                    id="register"
+                    className="btn btn-success show-register"
+                  >
+                    <FaPlus />
+                    Registrar
+                  </button>
+                  <button
+                    id="cancel-register"
+                    className="btn btn-secondary show-register"
+                    onClick={() => {
+                      setShow_register(false);
+                    }}
+                  >
+                    Cancelar
+                  </button>
+                </>
+              ) : null}
+            </div>
           </div>
-        </div>
 
-        <div>
-          <h1 className="name-link">Mis Clientes</h1>
+          <div>
+            <h1 className="name-link">Mis Clientes</h1>
 
-          <MaterialTable
-            columns={columns}
-            data={tableData}
-            icons={tableIcons}
-            title="Lista de Clientes"
-            options={{
-              filtering: true,
-              paging: true,
-              pageSizeOptions: [2, 5, 10, 15, 20, 50],
-              pageSize: 10,
-              paginationType: "stepped",
-              showFirstLastPageButtons: false,
-              exportButton: true,
-              exportAllData: true,
-              exportFileName: "Mis Clientes",
-              selection: true,
-            }}
-          />
+            <MaterialTable
+              columns={columns}
+              data={tableData}
+              icons={tableIcons}
+              title="Lista de Clientes"
+              options={{
+                filtering: true,
+                paging: true,
+                pageSizeOptions: [2, 5, 10, 15, 20, 50],
+                pageSize: 10,
+                paginationType: "stepped",
+                showFirstLastPageButtons: false,
+                exportButton: true,
+                exportAllData: true,
+                exportFileName: "Mis Clientes",
+                selection: true,
+              }}
+            />
+          </div>
+          <AmplifySignOut />
         </div>
-        <AmplifySignOut />
       </AmplifyAuthenticator>
     </>
   );
