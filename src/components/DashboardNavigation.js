@@ -2,7 +2,7 @@ import React from "react";
 import { FaBell } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
 import "../styles/navDashboard.css";
-const navDashboard = (props) => {
+const DashboardNavigation = (props) => {
   const { navSidebar, show_sidebar } = props;
   const avatar_user =
     "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
@@ -24,4 +24,4 @@ const navDashboard = (props) => {
   );
 };
 
-export default navDashboard;
+export default DashboardNavigation;

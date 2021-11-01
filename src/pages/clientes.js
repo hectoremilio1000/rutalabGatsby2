@@ -167,10 +167,9 @@ const Clientes = () => {
         {/* <PruebaSidebar /> */}
         <DashboardSidebar navSidebar={navSidebar} show_sidebar={show_sidebar} />
         <div
-          className="container-dashboard"
-          // className={`container-dashboard ${
-          //   !navSidebar ? "close_sidebar" : ""
-          // }`}
+          className={`container-dashboard ${
+            !navSidebar ? "close_sidebar" : ""
+          }`}
         >
           <div>
             <h1 className="row-title">Datos del paciente</h1>

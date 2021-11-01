@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/sidebarDashboard.css";
-// import NavDashboard from "./NavDashboard";
+import DashboardNavigation from "./DashboardNavigation";
 // import SubMenu from "./SubMenu";
 // import { SidebarData } from "./SidebarData";
 
 const SidebarDashboard = (props) => {
   const { navSidebar, show_sidebar } = props;
-  // const avatar_user =
-  //   "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
+  const avatar_user =
+    "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
   const logo =
     "https://imagenesrutalab.s3.amazonaws.com/sanmateo/logo/logo_sanmateo_final.jpg";
   const logo_name =
@@ -22,7 +22,10 @@ const SidebarDashboard = (props) => {
         onClick={show_sidebar}
       ></div>
 
-      {/* <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} /> */}
+      <DashboardNavigation
+        navSidebar={navSidebar}
+        show_sidebar={show_sidebar}
+      />
       <aside
         className={`aside-dashboard ${!navSidebar ? "closed_sidebar" : ""}`}
       >
