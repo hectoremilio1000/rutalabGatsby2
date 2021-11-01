@@ -261,7 +261,7 @@ const Clientes = () => {
               filtering: true,
               paging: true,
               pageSizeOptions: [2, 5, 10, 15, 20, 50],
-              pageSize: 2,
+              pageSize: 10,
               paginationType: "stepped",
               showFirstLastPageButtons: false,
               exportButton: true,
