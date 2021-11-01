@@ -65,14 +65,7 @@ const Clientes = () => {
   //   Formulario
   //  ---- obtencion de los datos por onchange
   const [name, setName] = useState("");
-  const [lastname, seTlastname] = useState("");
-  const [gender, setGender] = useState("");
-  const [estados, setEstados] = useState("");
-  const [date, setDate] = useState("");
-  const [calle, setCalle] = useState("");
-  const [number_ext, setNumber_ext] = useState("");
-  const [number_int, setNumber_int] = useState("");
-  const [municipalidad, setMunicipalidad] = useState("");
+  const [direccion, setDireccion] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
@@ -83,20 +76,8 @@ const Clientes = () => {
   };
 
   const sendDates = () => {
-    console.log("aqui iran los datos");
-    console.log(
-      name,
-      calle,
-      date,
-      lastname,
-      estados,
-      municipalidad,
-      gender,
-      email,
-      phone,
-      number_ext,
-      number_int
-    );
+    console.log("aqui iran los datos finales");
+    console.log(name, direccion, email, phone);
   };
   // ---- fin de obtencion de los datos por onchange
 
@@ -150,6 +131,92 @@ const Clientes = () => {
       <AmplifyAuthenticator>
         <div>
           <h1 className="row-title">Datos del paciente</h1>
+          <div className="container-registers">
+            {!show_register ? (
+              <button
+                className="btn btn-primary show-register"
+                onClick={() => {
+                  setShow_register(true);
+                }}
+              >
+                Registrar
+              </button>
+            ) : null}
+            {show_register ? (
+              <>
+                <h1 className="row-title">Datos del paciente</h1>
+                <div className="dates-row-4">
+                  <div className="group-date">
+                    <span>Nombre completo</span>
+                    <input
+                      name="name"
+                      type="text"
+                      className="control-form"
+                      placeholder="Ingresa el nombre del paciente"
+                      onChange={e => {
+                        setName(e.target.value);
+                      }}
+                    />
+                  </div>
+
+                  <div className="group-date">
+                    <span>Dirección</span>
+                    <input
+                      name="calle"
+                      type="text"
+                      className="control-form"
+                      placeholder="Nombre de la calle"
+                      onChange={e => {
+                        setDireccion(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="group-date">
+                    <span>Email</span>
+                    <input
+                      name="email"
+                      type="email"
+                      className="control-form"
+                      placeholder="Ingresa el @correo electronico"
+                      onChange={e => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                  </div>
+                  <div className="group-date">
+                    <span>Telefono</span>
+                    <input
+                      name="phone"
+                      type="number"
+                      className="control-form"
+                      placeholder="Ingresa el numero de telefono"
+                      onChange={e => {
+                        setPhone(e.target.value);
+                      }}
+                    />
+                  </div>
+                </div>
+                <button
+                  onClick={sendDates}
+                  id="register"
+                  className="btn btn-success show-register"
+                >
+                  <FaPlus />
+                  Registrar
+                </button>
+                <button
+                  id="cancel-register"
+                  className="btn btn-secondary show-register"
+                  onClick={() => {
+                    setShow_register(false);
+                    resetForm();
+                  }}
+                >
+                  Cancelar
+                </button>
+              </>
+            ) : null}
+          </div>
         </div>
 
         <div>
