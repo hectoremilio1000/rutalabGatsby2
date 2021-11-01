@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/sidebarDashboard.css";
 import DashboardNavigation from "./DashboardNavigation";
-// import SubMenu from "./SubMenu";
-// import { SidebarData } from "./SidebarData";
+import MenuNav from "./MenuNav";
+import { DataSidebar } from "./DataSidebar";
 
 const SidebarDashboard = (props) => {
   const { navSidebar, show_sidebar } = props;
@@ -36,15 +36,15 @@ const SidebarDashboard = (props) => {
           </div>
         </div>
         <div className="main">
-          {/* <div className="perfil-user">
+          <div className="perfil-user">
             <img src={avatar_user} alt="img_avatar_user" />
             <p>Jampier Smith Vasquez Mija</p>
           </div>
           <ul className="nav-links">
-            {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
+            {DataSidebar.map((item, index) => {
+              return <MenuNav item={item} key={index} />;
             })}
-          </ul> */}
+          </ul>
         </div>
       </aside>
     </>

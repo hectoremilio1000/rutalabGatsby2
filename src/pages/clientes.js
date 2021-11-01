@@ -164,7 +164,6 @@ const Clientes = () => {
       </Link>
 
       <AmplifyAuthenticator>
-        {/* <PruebaSidebar /> */}
         <DashboardSidebar navSidebar={navSidebar} show_sidebar={show_sidebar} />
         <div
           className={`container-dashboard ${
