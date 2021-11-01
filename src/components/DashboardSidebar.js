@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/sidebarDashboard.css";
-import NavDashboard from "./NavDashboard";
-import SubMenu from "./SubMenu";
-import { SidebarData } from "./SidebarData";
+// import NavDashboard from "./NavDashboard";
+// import SubMenu from "./SubMenu";
+// import { SidebarData } from "./SidebarData";
 
-const SidebarDashboard = props => {
+const SidebarDashboard = (props) => {
   const { navSidebar, show_sidebar } = props;
-  const avatar_user =
-    "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
+  // const avatar_user =
+  //   "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
   const logo =
     "https://imagenesrutalab.s3.amazonaws.com/sanmateo/logo/logo_sanmateo_final.jpg";
   const logo_name =
@@ -22,7 +22,7 @@ const SidebarDashboard = props => {
         onClick={show_sidebar}
       ></div>
 
-      <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} />
+      {/* <NavDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} /> */}
       <aside
         className={`aside-dashboard ${!navSidebar ? "closed_sidebar" : ""}`}
       >
@@ -33,7 +33,7 @@ const SidebarDashboard = props => {
           </div>
         </div>
         <div className="main">
-          <div className="perfil-user">
+          {/* <div className="perfil-user">
             <img src={avatar_user} alt="img_avatar_user" />
             <p>Jampier Smith Vasquez Mija</p>
           </div>
@@ -41,7 +41,7 @@ const SidebarDashboard = props => {
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}
-          </ul>
+          </ul> */}
         </div>
       </aside>
     </>

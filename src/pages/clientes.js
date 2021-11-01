@@ -15,8 +15,7 @@ import { createPaciente } from "../graphql/mutations";
 import { AmplifySignOut, AmplifyAuthenticator } from "@aws-amplify/ui-react";
 
 // import sidebar dashboard
-import PruebaSidebar from "../components/PruebaSidebar";
-// import SidebarDashboard from "../components/SidebarDashboard";
+import DashboardSidebar from "../components/DashboardSidebar";
 
 //importar iconos
 import { FaPlus } from "react-icons/fa";
@@ -153,10 +152,10 @@ const Clientes = () => {
     fetchPacientes();
   }, []);
 
-  // const [navSidebar, setNavSidebar] = useState(true);
-  // const show_sidebar = () => {
-  //   setNavSidebar(!navSidebar);
-  // };
+  const [navSidebar, setNavSidebar] = useState(true);
+  const show_sidebar = () => {
+    setNavSidebar(!navSidebar);
+  };
 
   return (
     <>
@@ -165,8 +164,8 @@ const Clientes = () => {
       </Link>
 
       <AmplifyAuthenticator>
-        <PruebaSidebar />
-        {/* <SidebarDashboard navSidebar={navSidebar} show_sidebar={show_sidebar} /> */}
+        {/* <PruebaSidebar /> */}
+        <DashboardSidebar navSidebar={navSidebar} show_sidebar={show_sidebar} />
         <div
           className="container-dashboard"
           // className={`container-dashboard ${
