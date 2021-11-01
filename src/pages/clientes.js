@@ -9,6 +9,7 @@ import MaterialTable from "material-table";
 // //API AMPKILY
 import { API, graphqlOperation } from "aws-amplify";
 import { listPacientes } from "../graphql/queries";
+import { createPaciente } from "../graphql/mutations";
 
 //import authenticator
 import { AmplifySignOut, AmplifyAuthenticator } from "@aws-amplify/ui-react";
@@ -71,15 +72,11 @@ const Clientes = () => {
 
   //   reset formulario y esconder
 
-  const resetForm = () => {
-    console.log("refresh");
-  };
-
-  const sendDates = () => {
-    console.log("aqui iran los datos finales");
-    console.log(name, direccion, email, phone);
-  };
-  // ---- fin de obtencion de los datos por onchange
+  // const sendDates = () => {
+  //   console.log("aqui iran los datos finales");
+  //   console.log(name, direccion, email, phone);
+  // };
+  // // ---- fin de obtencion de los datos por onchange
 
   const columns = [
     {
@@ -107,6 +104,40 @@ const Clientes = () => {
     },
   ];
 
+  //creando paciente nuevo
+
+  const newPaciente = {
+    name: name,
+    direccion: direccion,
+    email: email,
+    telefono: phone,
+  };
+
+  const createNewPaciente = async () => {
+    try {
+      console.log("nuevo createPaciente");
+      const DatosCreateNewPaciente = await API.graphql(
+        graphqlOperation(createPaciente, { input: newPaciente })
+      );
+      window.alert("se ha creado un nuevo paciente");
+      console.log(DatosCreateNewPaciente);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //refrescar formulario
+  // const resetForm = () => {
+  //   console.log("refresh");
+  // };
+
+  //cancelar registr
+
+  const cancelarRegistro = () => {
+    window.alert("se canceló un registro");
+  };
+
+  //sacando datos de los pacientes
   const fetchPacientes = async () => {
     try {
       const DataPacientes = await API.graphql(graphqlOperation(listPacientes));
@@ -197,7 +228,7 @@ const Clientes = () => {
                   </div>
                 </div>
                 <button
-                  onClick={sendDates}
+                  onClick={createNewPaciente}
                   id="register"
                   className="btn btn-success show-register"
                 >
@@ -208,8 +239,7 @@ const Clientes = () => {
                   id="cancel-register"
                   className="btn btn-secondary show-register"
                   onClick={() => {
-                    setShow_register(false);
-                    resetForm();
+                    cancelarRegistro();
                   }}
                 >
                   Cancelar
