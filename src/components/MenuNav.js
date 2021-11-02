@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-const MenuNav = ({ item, index }) => {
+
+const MenuNav = ({ item, index, setView_container }) => {
   const [subnav, setSubnav] = useState(false);
   const showSubnav = () => {
     setSubnav(!subnav);
@@ -15,9 +16,15 @@ const MenuNav = ({ item, index }) => {
       >
         <div className={`link-block ${subnav ? "link-active" : ""}`}>
           <div className="left-link">
-            <Link className="toggle-drop" to={item.path}>
+            <div
+              className="toggle-drop"
+              role="presentation"
+              onClick={() => {
+                setView_container(`${item.path}`);
+              }}
+            >
               {item.icon} <p>{item.title}</p>
-            </Link>
+            </div>
           </div>
           {item.subNav && subnav ? (
             <div className="right-link">{item.iconOpened}</div>

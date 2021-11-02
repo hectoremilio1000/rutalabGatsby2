@@ -4,8 +4,8 @@ import DashboardNavigation from "./DashboardNavigation";
 import MenuNav from "./MenuNav";
 import { DataSidebar } from "./DataSidebar";
 
-const SidebarDashboard = (props) => {
-  const { navSidebar, show_sidebar } = props;
+const DashboardSidebar = (props) => {
+  const { navSidebar, show_sidebar, setView_container } = props;
   const avatar_user =
     "https://image.freepik.com/foto-gratis/hombre-joven-sonriente-playa_23-2147645587.jpg";
   const logo =
@@ -42,7 +42,13 @@ const SidebarDashboard = (props) => {
           </div>
           <ul className="nav-links">
             {DataSidebar.map((item, index) => {
-              return <MenuNav item={item} key={index} />;
+              return (
+                <MenuNav
+                  setView_container={setView_container}
+                  item={item}
+                  key={index}
+                />
+              );
             })}
           </ul>
         </div>
@@ -51,4 +57,4 @@ const SidebarDashboard = (props) => {
   );
 };
 
-export default SidebarDashboard;
+export default DashboardSidebar;
