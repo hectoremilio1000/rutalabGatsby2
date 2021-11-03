@@ -12,7 +12,7 @@ const Clientes = () => {
         Home
       </Link>
       <AmplifyAuthenticator>
-        <h1>hola administrador con cambios</h1>
+        <h1>próximamente estará disponible esta página </h1>
 
         <AmplifySignOut>
           <button>
