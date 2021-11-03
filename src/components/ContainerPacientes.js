@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import MaterialTable from "material-table";
+
+import { DataClientes } from "../components/DataClientes";
 // //API AMPKILY
-import { API, graphqlOperation } from "aws-amplify";
-import { listPacientes } from "../graphql/queries";
-import { createPaciente } from "../graphql/mutations";
+// import { API, graphqlOperation } from "aws-amplify";
+// import { listPacientes } from "../graphql/queries";
+// import { createPaciente } from "../graphql/mutations";
 
 //importar iconos
 import { FaPlus } from "react-icons/fa";
@@ -64,10 +66,6 @@ const ContainerPacientes = () => {
 
   //   reset formulario y esconder
 
-  // const sendDates = () => {
-  //   console.log("aqui iran los datos finales");
-  //   console.log(name, direccion, email, phone);
-  // };
   // // ---- fin de obtencion de los datos por onchange
 
   const columns = [
@@ -98,24 +96,25 @@ const ContainerPacientes = () => {
 
   //creando paciente nuevo
 
-  const newPaciente = {
-    name: name,
-    direccion: direccion,
-    email: email,
-    telefono: phone,
-  };
+  //   const newPaciente = {
+  //     name: name,
+  //     direccion: direccion,
+  //     email: email,
+  //     telefono: phone,
+  //   };
 
   const createNewPaciente = async () => {
-    try {
-      console.log("nuevo createPaciente");
-      const DatosCreateNewPaciente = await API.graphql(
-        graphqlOperation(createPaciente, { input: newPaciente })
-      );
-      window.alert("se ha creado un nuevo paciente");
-      console.log(DatosCreateNewPaciente);
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("crear clientes");
+    // try {
+    //   console.log("nuevo createPaciente");
+    //   const DatosCreateNewPaciente = await API.graphql(
+    //     graphqlOperation(createPaciente, { input: newPaciente })
+    //   );
+    //   window.alert("se ha creado un nuevo paciente");
+    //   console.log(DatosCreateNewPaciente);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   //cancelar registr
@@ -126,15 +125,17 @@ const ContainerPacientes = () => {
 
   //sacando datos de los pacientes
   const fetchPacientes = async () => {
-    try {
-      const DataPacientes = await API.graphql(graphqlOperation(listPacientes));
-      //   console.log(DataPacientes);
-      const PacientesItems = DataPacientes.data.listPacientes.items;
-      //   console.log(PacientesItems);
-      setTableData(PacientesItems);
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("obteniendo datos de los pacientes");
+    setTableData(DataClientes);
+    // try {
+    //   const DataPacientes = await API.graphql(graphqlOperation(listPacientes));
+    //   //   console.log(DataPacientes);
+    //   const PacientesItems = DataPacientes.data.listPacientes.items;
+    //   //   console.log(PacientesItems);
+    //   setTableData(PacientesItems);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   useEffect(() => {
@@ -144,7 +145,6 @@ const ContainerPacientes = () => {
   return (
     <div>
       <div>
-        <h1 className="row-title">Datos del paciente</h1>
         <div className="container-registers">
           {!show_register ? (
             <button

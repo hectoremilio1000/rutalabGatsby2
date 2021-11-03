@@ -2,9 +2,6 @@ import React, { useState } from "react";
 
 import { Link } from "gatsby";
 
-//importar dataclientes
-// import { DataClientes } from "../components/DataClientes";
-
 //import authenticator
 import { AmplifyAuthenticator } from "@aws-amplify/ui-react";
 
@@ -13,9 +10,7 @@ import DashboardSidebar from "../components/DashboardSidebar";
 
 // containers
 
-import ContainerPacientes from "../components/ContainerPacientes";
-import ContainerOrdenes from "../components/ContainerOrdenes";
-import ContainerEscritorio from "../components/ContainerEscritorio";
+import ContainerOrdenesClients from "../components/ContainerOrdenesClients";
 
 const Clientes = () => {
   const [navSidebar, setNavSidebar] = useState(true);
@@ -41,9 +36,7 @@ const Clientes = () => {
             !navSidebar ? "close_sidebar" : ""
           }`}
         >
-          {view_container === "pacientes" ? <ContainerPacientes /> : null}
-          {view_container === "escritorio" ? <ContainerEscritorio /> : null}
-          {view_container === "ordenes" ? <ContainerOrdenes /> : null}
+          {view_container === "escritorio" ? <ContainerOrdenesClients /> : null}
         </div>
       </AmplifyAuthenticator>
     </>
