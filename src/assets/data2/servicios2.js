@@ -3,8 +3,8 @@ const servicios = [
     id: "1",
     titulo: "Prueba COVID PCR",
     imagen: "https://imagenesrutalab.s3.amazonaws.com/rutalab/PCR_vector.jpg",
-    precio: 1700,
-    oldPrice: 2000,
+    precio: 1500,
+    oldPrice: 1800,
     tiempoResultado: 30,
     descripcion:
       "Método específico para determinar la presencia del virus. Idealmente se utiliza en pacientes que presentan síntomas agudos para confirmar la enfermedad. Es recomendada si el paciente tuvo contacto con una persona diagnosticada, incluso si no presenta síntomas. Se requiere la recolección de células infectadas de la nasofaringe y orofaringe del paciente mediante un hisopo. Se requiere ayuno de 4- 5 horas.",
@@ -19,8 +19,8 @@ const servicios = [
     titulo: "PRUEBA DE ANTÍGENO (prueba rápida)",
     imagen:
       "https://imagenesrutalab.s3.amazonaws.com/images/covid/pruebaCovid.jpg",
-    precio: 690,
-    oldPrice: 890,
+    precio: 600,
+    oldPrice: 800,
     tiempoResultado: 30,
     descripcion:
       "Una prueba rápida de antígenos o prueba rápida es una prueba de diagnóstico rápida que directamente detecta la presencia o ausencia de un antígeno, en este caso para detectar la presencia de SARS-CoV-2, el virus que causa COVID-19. Las pruebas rápidas son un tipo de pruebas de flujo lateral que detectan proteínas, lo que las distingue de otras pruebas médicas que detectan anticuerpos (pruebas de anticuerpos) o ácido nucleico (pruebas de ácido nucleico), de tipo laboratorio o punto de atención.",
