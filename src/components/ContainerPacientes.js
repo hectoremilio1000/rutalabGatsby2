@@ -238,6 +238,25 @@ const ContainerPacientes = () => {
         <MaterialTable
           columns={columns}
           data={tableData}
+          editable={{
+            onRowUpdate: (newRow, oldRow) =>
+              new Promise((resolve, reject) => {
+                // const updateData = tableData;
+                // updateData[oldRow.tableData.id] = newRow;
+                // haces el llamado a la api de grapgql para enviar la nueva actualizacion
+
+                // fin de la api
+                // setTableData(updateData);
+                console.log(newRow, oldRow);
+                console.log(newRow.id);
+                setTimeout(() => resolve(), 500);
+              }),
+            onRowDelete: (selectedRow) =>
+              new Promise((resolve, reject) => {
+                console.log(selectedRow);
+                setTimeout(() => resolve(), 500);
+              }),
+          }}
           icons={tableIcons}
           title="Lista de Clientes"
           options={{
@@ -251,6 +270,8 @@ const ContainerPacientes = () => {
             exportAllData: true,
             exportFileName: "Mis Clientes",
             selection: true,
+            addRowPosition: "first",
+            actionsColumnIndex: -1,
           }}
         />
       </div>
