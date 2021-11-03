@@ -120,7 +120,7 @@
 import React from "react";
 
 const Administrador = () => {
-  return <h1>hola administrador</h1>;
+  return <h1>Pronto estará disponible esta página</h1>;
 };
 
 export default Administrador;
