@@ -25,6 +25,7 @@
     "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-theme-ui": "^0.10.1",
+    "gatsby-plugin-whatshelp": "^1.0.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "global": "^4.4.0",
     "postcss": "^8.3.6",
